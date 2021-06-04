@@ -5,7 +5,7 @@ class HomeView extends Component {
 
 
   render() {
-    return <h1>HomeView</h1>;
+    return <h1>Welcome to Phonebook App</h1>;
   }
 }
 

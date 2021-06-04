@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import Navigation from './Navigation';
-import UserMenu from "./UserMenu";
+import UserMenu from "./UserMenu/UserMenu";
 import AuthNav from "./AuthNav";
 import {getIsAuth} from '../redux/auth/auth-selectors';
 

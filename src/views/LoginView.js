@@ -61,13 +61,13 @@ LoginView.propTypes = {
   onLogin: PropTypes.func.isRequired,
 };
 
-// const mapDispatchToProps = {
-//   onLogin: authOperations.login,
-// };
+const mapDispatchToProps = {
+  onLogin: authOperations.login,
+};
 
-const mapDispatchToProps =dispatch => ({
-  onLogin:(data) =>  dispatch(authOperations.login(data)),
-});
+// const mapDispatchToProps =dispatch => ({
+//   onLogin:(data) =>  dispatch(authOperations.login(data)),
+// });
 
 
 
