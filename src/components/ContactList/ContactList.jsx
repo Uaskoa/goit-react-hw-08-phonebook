@@ -27,6 +27,7 @@ ContactList.propTypes = {
 
 const mapStateToProps = (state) => ({
   contacts: getFilteredContacts(state),
+  
 });
 
 const mapDispatchToProps = (dispatch) => ({
