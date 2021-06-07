@@ -1,6 +1,5 @@
 import { combineReducers } from "redux";
 import { createReducer } from "@reduxjs/toolkit";
-// import actionTypes from "./phonebook-types";
 import {
   fetchContactsRequest,
   fetchContactsSuccess,

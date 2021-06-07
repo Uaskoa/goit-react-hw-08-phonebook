@@ -7,17 +7,19 @@ import PropTypes from "prop-types";
 
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
-    <ul className="contact-list">
-      {contacts.map((contact) => (
-        <ContactListItem
-          id={contact.id}
-          key={contact.id}
-          name={contact.name}
-          number={contact.number}
-          onDeleteContact={onDeleteContact}
-        />
-      ))}
-    </ul>
+    <div>
+      <ul className="contact-list">
+        {contacts.map((contact) => (
+          <ContactListItem
+            id={contact.id}
+            key={contact.id}
+            name={contact.name}
+            number={contact.number}
+            onDeleteContact={onDeleteContact}
+          />
+        ))}
+      </ul>
+    </div>
   );
 };
 
@@ -27,7 +29,6 @@ ContactList.propTypes = {
 
 const mapStateToProps = (state) => ({
   contacts: getFilteredContacts(state),
-  
 });
 
 const mapDispatchToProps = (dispatch) => ({

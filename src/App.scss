@@ -3,13 +3,16 @@
   margin: 0 auto;
 }
 
-.phonebook {
-  width: 400px;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 15px;
-  background-color: #f5f2f2;
+.form {
+  &-wrapper {
+    background-color: #f5f2f2;
+  }
+
+  &-view {
+    width: 400px;
+    margin: 0 auto;
+    padding: 15px;
+  }
 }
 
 h1,

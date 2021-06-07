@@ -2,7 +2,7 @@ import { Component, Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import routes from "./routes";
-import AppBar from "./components/AppBar";
+import AppBar from "./components/AppBar/AppBar";
 import NotFoundView from "./views/NotFoundView";
 import { authOperations } from "./redux/auth";
 import PrivateRoute from "./components/PrivateRoute";
@@ -34,7 +34,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className="container">
         <AppBar />
         <Suspense
           fallback={
@@ -70,13 +70,13 @@ class App extends Component {
             <Route component={NotFoundView} />
           </Switch>
         </Suspense>
-      </>
+      </div>
     );
   }
 }
 
 const mapDispatchToProps = {
-  onGetCurrentUser: authOperations.getCuurentUser,
+  onGetCurrentUser: authOperations.getCurrentUser,
 };
 
 export default connect(null, mapDispatchToProps)(App);

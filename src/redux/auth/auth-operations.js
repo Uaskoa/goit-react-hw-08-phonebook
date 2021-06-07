@@ -44,7 +44,7 @@ const login = (credentials) => async (dispatch) => {
     const response = await axios.post("/users/login", credentials);
     token.set(response.data.token);
     dispatch(loginSuccess(response.data));
-    } catch (error) {
+  } catch (error) {
     dispatch(loginError(error.message));
   }
 };
@@ -61,24 +61,25 @@ const logout = () => async (dispatch) => {
   }
 };
 
-const getCuurentUser =() => async (dispatch, getState) =>  {
-  const {auth: {token: persistedToken}} = getState()
+const getCurrentUser = () => async (dispatch, getState) => {
+  const {
+    auth: { token: persistedToken },
+  } = getState();
 
-if(!persistedToken) {
-  return
-}
-
-token.set(persistedToken);
-dispatch(getCurrentUserRequest());
-try {
-const response = await axios.get("/users/current");
-dispatch(getCurrentUserSuccess(response.data));
-} catch (error){
-    dispatch(getCurrentUserError(error.message));
+  if (!persistedToken) {
+    return;
   }
 
-}
+  token.set(persistedToken);
+  dispatch(getCurrentUserRequest());
+  try {
+    const response = await axios.get("/users/current");
+    dispatch(getCurrentUserSuccess(response.data));
+  } catch (error) {
+    dispatch(getCurrentUserError(error.message));
+  }
+};
 
-const authOperations = { register, login, logout, getCuurentUser};
+const authOperations = { register, login, logout, getCurrentUser };
 
 export default authOperations;

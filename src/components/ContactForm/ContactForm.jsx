@@ -64,7 +64,7 @@ class ContactForm extends Component {
             title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
             required
           />
-          <button className="form-button button" type="submit">
+          <button className="form-button button button-center" type="submit">
             Add contact
           </button>
         </label>

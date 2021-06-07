@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import routes from "../routes";
-import './Navigation.scss';
+import "../components/Navigation/Navigation.scss";
 
 const AuthNav = () => {
   return (
-    <nav className="nav">
+    <nav className="nav authnav">
       <NavLink
         className="nav__link"
         exact

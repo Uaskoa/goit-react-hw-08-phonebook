@@ -10,7 +10,6 @@ import {
   fetchContactsSuccess,
   fetchContactsError,
 } from "./phonebook-actions";
-// axios.defaults.baseURL = "http://localhost:3000/";
 
 const fetchContacts = () => async (dispatch) => {
   dispatch(fetchContactsRequest());
@@ -49,8 +48,6 @@ const deleteContact = (contactId) => async (dispatch) => {
 const phonebookOperations = { fetchContacts, addContact, deleteContact };
 
 export default phonebookOperations;
-
-
 
 // export default { fetchContacts, addContact, deleteContact };
 
